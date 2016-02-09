@@ -11,18 +11,49 @@
         <div class="page-header text-center">
             <h1>Comunicación entre controladores</h1>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div ng-controller="ProyectoUnoController">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre"
-                               ng-model="nombre" />
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Usando un servicio</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div ng-controller="CompartiendoUsandoServiciosUnoCtrl">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="color" placeholder="color"
+                                       ng-model="colores.primario" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div ng-controller="CompartiendoUsandoServiciosDosCtrl">
+                            <pre>&nbsp;{{colores.primario}}</pre>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div ng-controller="ProyectoUnoControllerDos">
-                    <pre>&nbsp;{{nombre}}</pre>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Usando eventos</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div ng-controller="CompartiendoUsandoEventosUnoCtrl">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre"
+                                       ng-model="nombre" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div ng-controller="CompartiendoUsandoEventosDosCtrl">
+                            <pre>&nbsp;{{nombre}}</pre>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
